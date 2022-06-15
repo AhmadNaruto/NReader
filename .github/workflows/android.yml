@@ -5,8 +5,8 @@ name: Build
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
-  pull_request:
-    branches: [ "main" ]
+  # pull_request:
+  #   branches: [ "main" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -40,7 +40,7 @@ jobs:
       ## Change arguments to any gradle command
       - name: Build all artifacts
         id: buildAllApks
-        uses: eskatos/gradle-command-action@v1.3.3
+        uses: eskatos/gradle-command-action@v2
         with:
           gradle-version: current
           wrapper-cache-enabled: true
@@ -48,4 +48,13 @@ jobs:
           configuration-cache-enabled: true
           arguments: assemble
 
-
+      - name: Rename app
+        run: |
+          cd app/build/outputs/apk/release
+          mv app-release-unsigned.apk QuickNovel.apk
+      
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: QuickNovel
+          path: app/build/outputs/apk/release/QuickNovel.apk
