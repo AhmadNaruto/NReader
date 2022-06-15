@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.material.demo"
-        minSdk 21
+        minSdk 22
         targetSdk 32
         versionCode 1
         versionName '1.0'
@@ -18,31 +18,11 @@ android {
         vectorDrawables.useSupportLibrary = true
     }
 
-    signingConfigs {
-        // We use a bundled debug keystore, to allow debug builds from CI to be upgradable
-        debug {
-            storeFile rootProject.file('debug.keystore')
-            storePassword 'android'
-            keyAlias 'androiddebugkey'
-            keyPassword 'android'
-        }
-    }
 
     buildTypes {
-        debug {
-            signingConfig signingConfigs.debug
-        }
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-        applicationVariants.all{
-            variant ->
-                variant.outputs.each{
-                    output->
-                        def name = "m3DemoApp-${variant.buildType.name}-${variant.versionName}-${getDate()}.apk"
-                        output.outputFileName = name
-                }
         }
     }
 
