@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.material.demo">
+    package="com.gh.nreader">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ComposeTemplate">
         <activity
-            android:name="com.material.demo.ui.MainActivity"
+            android:name="com.gh.nreader.ui.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.ComposeTemplate.NoActionBar">
             <intent-filter>

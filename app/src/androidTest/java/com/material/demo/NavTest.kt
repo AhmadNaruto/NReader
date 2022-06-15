@@ -1,4 +1,4 @@
-package com.material.demo
+package com.gh.nreader
 
 import android.content.res.Resources
 import androidx.compose.ui.test.junit4.createComposeRule
@@ -6,8 +6,8 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import androidx.test.platform.app.InstrumentationRegistry
 import com.google.accompanist.navigation.material.ExperimentalMaterialNavigationApi
-import com.material.demo.ui.MainViewModel
-import com.material.demo.ui.nav.DemoNavHost
+import com.gh.nreader.ui.MainViewModel
+import com.gh.nreader.ui.nav.DemoNavHost
 import org.junit.Before
 import org.junit.Rule
 

@@ -96,6 +96,22 @@ dependencies {
 
     // Util libs
     implementation 'io.coil-kt:coil-compose:2.1.0'
+    
+    // Glide Image
+    implementation "com.github.skydoves:landscapist-glide:1.5.2"
+    
+    // Http Client
+    implementation "io.karn:khttp-android:0.1.2"
+    
+    // Scraper parser
+    implementation 'org.jsoup:jsoup:1.13.1'
+    
+    // Compose Rating Bar
+    implementation 'com.github.a914-gowtham:compose-ratingbar:1.2.3'
+    
+    // Compose Dialog 
+    implementation 'com.github.farhanroy:compose-awesome-dialog:1.0.1'
+    
 
     // Testing dependencies
     testImplementation "junit:junit:$rootProject.junitVersion"

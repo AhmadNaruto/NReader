@@ -1,4 +1,4 @@
-package com.material.demo
+package com.gh.nreader
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

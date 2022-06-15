@@ -1,4 +1,4 @@
-package com.material.demo
+package com.gh.nreader
 
 import android.content.res.Resources
 import androidx.compose.ui.test.assertIsDisplayed
@@ -6,9 +6,9 @@ import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import com.material.demo.data.ColorItem
-import com.material.demo.data.StaticData
-import com.material.demo.ui.feata.FeatABody
+import com.gh.nreader.data.ColorItem
+import com.gh.nreader.data.StaticData
+import com.gh.nreader.ui.feata.FeatABody
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test

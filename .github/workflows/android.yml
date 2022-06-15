@@ -46,15 +46,15 @@ jobs:
           wrapper-cache-enabled: true
           dependencies-cache-enabled: true
           configuration-cache-enabled: true
-          arguments: assemble
+          arguments: assembleRelease
 
       - name: Rename app
         run: |
           cd app/build/outputs/apk/release
-          mv app-release-unsigned.apk QuickNovel.apk
+          mv app-release-unsigned.apk NReader.apk
       
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: QuickNovel
-          path: app/build/outputs/apk/release/QuickNovel.apk
+          name: NReader
+          path: app/build/outputs/apk/release/NReader.apk
